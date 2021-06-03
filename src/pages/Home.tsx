@@ -1,10 +1,6 @@
-import Navbar from "../components/navbar/navbar";
+import Navbar from "../components/navbar/Navbar";
 
 const Home: React.FC = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <Navbar />;
 };
 export default Home;
