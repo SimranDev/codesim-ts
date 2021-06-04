@@ -1,14 +1,29 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar: React.FC = () => {
   return (
     <Container>
-      <div>
-        <ThemeSwitchContainer></ThemeSwitchContainer>
+      <section>
+        <ThemeSwitchContainer>
+          <ThemeSwitch />
+        </ThemeSwitchContainer>
         <LogoContainer>CodeSim</LogoContainer>
-        <NavLinksContainer></NavLinksContainer>
-      </div>
+        <NavLinksContainer>
+          <ul>
+            <li>
+              <Link to="/">Playground</Link>
+            </li>
+            <li>
+              <Link to="/">Contact</Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+          </ul>
+        </NavLinksContainer>
+      </section>
     </Container>
   );
 };
@@ -18,15 +33,16 @@ const Container = styled.nav`
   border: 1px dashed red;
   width: 100%;
 
-  div {
+  section {
     display: flex;
     max-width: 1200px;
     margin: auto;
-    height: 60px;
+    height: 50px;
   }
 `;
 
 const ThemeSwitchContainer = styled.div`
+  display: flex;
   border: 1px dashed pink;
   width: 35%;
 `;
@@ -44,4 +60,22 @@ const LogoContainer = styled.div`
 const NavLinksContainer = styled.div`
   border: 1px dashed pink;
   width: 35%;
+  display: flex;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px dashed red; */
+    width: 100%;
+  }
+
+  li {
+    list-style: none;
+    border: 1px dashed red;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;
