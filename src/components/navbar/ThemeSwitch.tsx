@@ -30,7 +30,6 @@ const SwitchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed brown;
 `;
 
 const SwitchLabel = styled.label`
@@ -42,9 +41,9 @@ const SwitchLabel = styled.label`
     display: none;
   }
 
-  @media (max-width: 540px) {
-    width: 3.6em;
-    height: 2.1em;
+  @media (max-width: 760px) {
+    width: 2.5em;
+    height: 1.4em;
   }
 `;
 
@@ -74,10 +73,12 @@ const SwitchSpan = styled.span`
     box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 760px) {
     &::before {
-      top: 3px;
+      top: 2.2px;
       left: 2px;
+      width: 1.05em;
+      height: 1.1em;
     }
   }
 `;
@@ -98,18 +99,22 @@ const SwitchInput = styled.input`
     box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 768px) {
     &:checked + ${SwitchSpan}::before {
-      top: 11.5px;
-      left: -11.5px;
+      top: 8px;
+      left: -17.5px;
+      width: 1.2em;
+      height: 0.7em;
     }
   }
 `;
 
 const ThemeName = styled.span`
-  font-size: 8px;
+  font-size: 7px;
+  font-weight: 900;
   transform: rotate(-90deg);
   width: 12px;
+  line-height: 7px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -117,5 +122,10 @@ const ThemeName = styled.span`
 
   &:nth-child(3) {
     transform: rotate(90deg);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 5px;
+    width: 10px;
   }
 `;

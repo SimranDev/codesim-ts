@@ -20,8 +20,9 @@ code {
 
 :root {
   --logo-font: "Libre Barcode 39 Text";
-  --primary-color: #6c63ff;
-  --bg-dark: #363537;
-  --primary-paper-color: #37474f;
-  --secondary-color: #455a64;
+  --primary-clr: #6c63ff;
+  --accent-clr: #ef6c00;
+  --secondary-clr: #455a64;
+  --bg-dark-clr: #363537;
+  --primary-paper-clr: #37474f;
 }

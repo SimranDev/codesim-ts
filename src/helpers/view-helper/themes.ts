@@ -4,7 +4,7 @@ import { DefaultTheme } from "styled-components";
 export const lightTheme: DefaultTheme = {
   body: "#FFF",
   text: "#363537",
-  background: "var(--bg-dark)",
+  background: "var(--bg-dark-clr)",
   descriptionText: "#616161",
 };
 export const darkTheme: DefaultTheme = {
@@ -15,7 +15,7 @@ export const darkTheme: DefaultTheme = {
 };
 
 export const GlobalStyles = createGlobalStyle`
-     body {
+  body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     transition: all 0.50s linear;
@@ -37,5 +37,23 @@ export const GlobalStyles = createGlobalStyle`
   section{
     background: ${({ theme }) => theme.body};
   }
+
+  h4, h5, h6{
+    color:${({ theme }) => theme.descriptionText}
+  }
+
+  #menu_label:before,
+  #menu_label:after,#menu_text_bar{
+        background-color: ${(props) => props.theme.descriptionText};
+
+  }
+
+  #nav_ul{
+    background: ${({ theme }) => theme.body};
+  }
+
+  /* div{
+    border: 1px dashed red;
+  } */
 
 `;
