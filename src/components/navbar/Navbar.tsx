@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const [check, setCheck] = useState(false);
 
   return (
-    <Container>
+    <Container test-dataid="nav">
       <section>
         <ThemeSwitchContainer>
           <ThemeSwitch />
